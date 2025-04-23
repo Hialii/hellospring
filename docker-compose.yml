@@ -13,9 +13,9 @@ services:
   db:
     image: postgres:16.2-alpine3.19
     environment:
-      POSTGRES_DB: devops
-      POSTGRES_USER: devuser
-      POSTGRES_PASSWORD: devpass
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "5432:5432"
   adminer:
