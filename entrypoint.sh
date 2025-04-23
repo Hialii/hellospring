@@ -3,7 +3,7 @@
 echo "🔐 Baixando variáveis do Parameter Store..."
 
 aws ssm get-parameters \
-    --names "/minhaapp/POSTGRES_USER" "/minhaapp/POSTGRES_PASSWORD" "/minhaapp/POSTGRES_DB" \
+    --names "/hellospring/POSTGRESS_DB" "/hellospring/POSTGRESS_PASSWORD" "/hellospring/POSTGRESS_USER" \
     --with-decryption \
     --query "Parameters[*].{Name:Name,Value:Value}" \
     --output text > raw_env.txt
