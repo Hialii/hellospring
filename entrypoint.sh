@@ -17,4 +17,4 @@ cat raw_env.txt | while read -r line; do
 done > .env
 
 echo "🚀 Subindo containers com docker-compose..."
-docker-compose up --build -d
+docker compose up --build -d
